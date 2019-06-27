@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.32;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M38.023,145.988a0.973,0.973,0,0,1-.689-0.283l-2.752-2.747-0.135.1a7.143,7.143,0,0,1-4.234,1.373,7.211,7.211,0,1,1,7.226-7.21,7.119,7.119,0,0,1-1.377,4.226l-0.1.134,2.751,2.746A0.974,0.974,0,0,1,38.023,145.988Zm-7.81-14.032a5.263,5.263,0,1,0,5.272,5.263A5.274,5.274,0,0,0,30.213,131.956Z" transform="translate(-23 -130)"/>
+</svg>

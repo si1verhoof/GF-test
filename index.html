@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Тестовое задание: GoodFactory</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap" rel="stylesheet">
+        <link href="normalize.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- ~час на свг: фотошоп + вставка-->
+        <div class="site-wrapper">
+            <svg style="display:none">
+                <symbol id="icon-magnifier" viewBox="0 0 16 16">
+                    <path class="cls-1" d="M38.023,145.988a0.973,0.973,0,0,1-.689-0.283l-2.752-2.747-0.135.1a7.143,7.143,0,0,1-4.234,1.373,7.211,7.211,0,1,1,7.226-7.21,7.119,7.119,0,0,1-1.377,4.226l-0.1.134,2.751,2.746A0.974,0.974,0,0,1,38.023,145.988Zm-7.81-14.032a5.263,5.263,0,1,0,5.272,5.263A5.274,5.274,0,0,0,30.213,131.956Z" transform="translate(-23 -130)"/>
+                </symbol>
+                <symbol id="icon-chat" viewBox="0 0 16 16">
+                    <path class="cls-1" d="M23.912,388A0.911,0.911,0,0,1,23,387.088v-12.6A2.489,2.489,0,0,1,25.487,372H36.513A2.489,2.489,0,0,1,39,374.487v7.875a2.49,2.49,0,0,1-2.487,2.488H27.44l-2.883,2.883A0.91,0.91,0,0,1,23.912,388Zm1.575-14.177a0.664,0.664,0,0,0-.663.664v10.4l1.594-1.593a0.916,0.916,0,0,1,.645-0.267h9.451a0.664,0.664,0,0,0,.663-0.664v-7.875a0.664,0.664,0,0,0-.663-0.664H25.487Z" transform="translate(-23 -372)"/>
+                </symbol>
+                <symbol id="icon-arrow" viewBox="0 0 8.5 5.656">
+                    <path id="select_arrow_copy_2" data-name="select_arrow copy 2" class="cls-1" d="M950.243,191.171l-1.415-1.414L946,192.585l-2.828-2.828-1.415,1.414L946,195.414Z" transform="translate(-941.75 -189.75)"/>
+                </symbol>
+                <symbol id="icon-download" viewBox="0 0 16.969 18.031">
+                    <path class="cls-1" d="M25.417,322.962a2.649,2.649,0,0,1-2.688-2.6v-2.4a1.034,1.034,0,0,1,2.067,0v2.4a0.613,0.613,0,0,0,.622.6H37a0.613,0.613,0,0,0,.621-0.6v-2.4a1.034,1.034,0,0,1,2.067,0v2.4a2.649,2.649,0,0,1-2.688,2.6H25.417Zm5.79-4.806a1.041,1.041,0,0,1-.731-0.294l-3.309-3.2a0.977,0.977,0,0,1,0-1.414,1.055,1.055,0,0,1,1.462,0l2.578,2.5,2.578-2.5a1.055,1.055,0,0,1,1.461,0,0.977,0.977,0,0,1,0,1.414l-3.309,3.2A1.042,1.042,0,0,1,31.208,318.156Zm0,0a1.019,1.019,0,0,1-1.033-1V305.941a1.034,1.034,0,0,1,2.067,0v11.214A1.019,1.019,0,0,1,31.208,318.156Z" transform="translate(-22.719 -304.938)"/>
+                </symbol>
+                <symbol id="icon-exit" viewBox="0 0 20.063 20">
+                    <path id="Exit" class="cls-1" d="M973.468,38h-8.46a1,1,0,0,1-1-1V19a1,1,0,0,1,1-1h8.46a1,1,0,1,1,0,2.005H966.01V35.991h7.458A1,1,0,1,1,973.468,38Zm4.8-13.344,2.329,2.281h-8.682a1,1,0,1,0,0,2.005h8.682l-2.329,2.281a1,1,0,1,0,1.4,1.433l4.084-4a1,1,0,0,0,0-1.433l-4.084-4A1,1,0,1,0,978.265,24.652Z" transform="translate(-964 -18)"/>
+                </symbol>
+                <symbol id="icon-folder" viewBox="0 0 18 16">
+                    <path id="folder" class="cls-1" d="M290,230l1.661,1.489A2,2,0,0,0,293,232h7v9.669a0.364,0.364,0,0,1-.382.331H286.382a0.364,0.364,0,0,1-.382-0.331V230.331a0.364,0.364,0,0,1,.382-0.331H290m0.514-2h-4.136A2.359,2.359,0,0,0,284,230.331v11.338A2.359,2.359,0,0,0,286.382,244h13.236A2.36,2.36,0,0,0,302,241.669V232a1.8,1.8,0,0,0-2-2h-7l-1.877-1.683a0.732,0.732,0,0,0-.605-0.317h0Z" transform="translate(-284 -228)"/>
+                </symbol>
+                <symbol id="icon-home" viewBox="0 0 16.969 18.031">
+                    <path class="cls-1" d="M25.695,91a2.649,2.649,0,0,1-2.687-2.6V79.583a1,1,0,0,1,.4-0.79l7.445-5.607a1.062,1.062,0,0,1,1.268,0l7.445,5.609a0.994,0.994,0,0,1,.4.789v8.812A2.649,2.649,0,0,1,37.276,91H25.695Zm-0.621-2.6a0.613,0.613,0,0,0,.621.6H37.276a0.613,0.613,0,0,0,.621-0.6V80.073l-6.411-4.829-6.412,4.829v8.322ZM33.967,91a1.018,1.018,0,0,1-1.033-1v-7.01h-2.9V90a1.034,1.034,0,0,1-2.066,0V81.986a1.018,1.018,0,0,1,1.033-1h4.964a1.019,1.019,0,0,1,1.034,1V90A1.018,1.018,0,0,1,33.967,91Z" transform="translate(-23 -72.969)"/>
+                </symbol>
+                <symbol id="icon-menu-close" viewBox="0 0 18 18">
+                    <path id="Shape_525_copy_10" data-name="Shape 525 copy 10" class="cls-1" d="M944.643,566.014A2.645,2.645,0,0,1,942,563.369V550.64A2.645,2.645,0,0,1,944.643,548H957.35a2.645,2.645,0,0,1,2.64,2.645v12.729a2.646,2.646,0,0,1-2.641,2.645H944.643Zm0-16.079a0.705,0.705,0,0,0-.705.705v12.729a0.705,0.705,0,0,0,.705.7H957.35a0.705,0.705,0,0,0,.7-0.7V550.64a0.706,0.706,0,0,0-.7-0.705H944.643Zm3.362,8.071a1,1,0,1,1,0-2h5.981a1,1,0,1,1,0,2h-5.981Zm1.989-4a1,1,0,1,1,2,0v5.981a1,1,0,1,1-2,0v-5.981Z" transform="translate(-942 -548)"/>
+                </symbol>
+                <symbol id="icon-menu-open" viewBox="0 0 18 18">
+                    <path id="Shape_525_copy_3" data-name="Shape 525 copy 3" class="cls-1" d="M944.643,246.014A2.645,2.645,0,0,1,942,243.369V230.64A2.645,2.645,0,0,1,944.643,228H957.35a2.645,2.645,0,0,1,2.64,2.645v12.729a2.646,2.646,0,0,1-2.641,2.645H944.643Zm0-16.079a0.705,0.705,0,0,0-.705.7v12.729a0.705,0.705,0,0,0,.705.705H957.35a0.705,0.705,0,0,0,.7-0.705V230.64a0.705,0.705,0,0,0-.7-0.7H944.643Zm3.362,8.071a1,1,0,1,1,0-2h5.981a1,1,0,1,1,0,2h-5.981Z" transform="translate(-942 -228)"/>
+                </symbol>
+                <symbol id="icon-mosaic" viewBox="0 0 17 17">
+                    <path class="cls-1" d="M35.5,203H32a1.5,1.5,0,0,1-1.5-1.473A1.5,1.5,0,0,1,29,203H24.5a1.5,1.5,0,0,1-1.5-1.5V197a1.5,1.5,0,0,1,1.473-1.5A1.5,1.5,0,0,1,23,194v-3.5a1.5,1.5,0,0,1,1.5-1.5h3a3,3,0,0,1,6,0h2a1.5,1.5,0,0,1,1.5,1.5v2a3,3,0,0,1,0,6h0v3A1.5,1.5,0,0,1,35.5,203Zm-3-2H35v-4.5h2a1,1,0,0,0,0-2H35V191H31.5v-2a1,1,0,0,0-2,0v2H25v2.5h1a2,2,0,1,1,0,4H25V201h3.5v-1a2,2,0,1,1,4,0v1Z" transform="translate(-23 -186)"/>
+                </symbol>
+                <symbol id="icon-sheet" viewBox="0 0 45 48">
+                    <path id="Shape_546_copy_5" data-name="Shape 546 copy 5" class="cls-1" d="M26.474,260.015a2.482,2.482,0,0,1-2.48-2.478V245.473A2.481,2.481,0,0,1,26.474,243h5.284a0.96,0.96,0,0,1,.687.284l5.284,5.278a0.974,0.974,0,0,1,.284.686v8.293a2.482,2.482,0,0,1-2.48,2.478H26.474Zm0-15.079a0.538,0.538,0,0,0-.538.537v12.064a0.539,0.539,0,0,0,.538.538h9.058a0.539,0.539,0,0,0,.538-0.538v-7.892l-4.715-4.709H26.474Zm5.284,5.277a0.971,0.971,0,0,1-.971-0.969v-5.279a0.971,0.971,0,0,1,1.942,0v4.308h4.313a0.97,0.97,0,1,1,0,1.94H31.758Z" transform="translate(-9 -232)"/>
+                </symbol>
+            </svg>
+            <header class="main-header">
+                <h1 class="visually-hidden">Тестовое задание на вёрстку GoodFactory</h1>
+                <div class="main-nav__logo">
+                    <p class="logo">
+                        Лого
+                    </p>
+                </div>
+                <div class="search-bar">
+                    <svg width="16" height="16" class="search-bar__icon search-bar__icon--magnifier"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-magnifier"></use></svg>
+                    <input type="text" class="search-bar__input" placeholder="Поиск" id="search-bar__input">
+                    <svg width="20.063" height="20" class="search-bar__icon search-bar__icon--exit"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-exit"></use></svg>
+                </div>
+            </header>
+            <main>
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <svg width="16.969" height="18.031" class="main-nav__icon main-nav__icon--home"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-home"></use></svg>
+                            <a class="main-nav__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <svg width="16" height="16" class="main-nav__icon main-nav__icon--magnifier"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-magnifier"></use></svg>
+                            <a class="main-nav__link">
+                                Пункт меню
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <svg width="17" height="17" class="main-nav__icon main-nav__icon--mosaic"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-mosaic"></use></svg>
+                            <a class="main-nav__link">
+                                Пункт меню
+                            </a>
+                        </li>
+                        <li class="main-nav__item main-nav__item--checked">
+                            <svg width="45" height="48" class="main-nav__icon main-nav__icon--sheet"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-sheet"></use></svg>
+                            <a class="main-nav__link main-nav__link--sheet">
+                                Пункт меню
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <svg width="16.969" height="18.031" class="main-nav__icon main-nav__icon--download"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-download"></use></svg>
+                            <a class="main-nav__link">
+                                Пункт меню в две строки
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <svg width="16" height="16" class="main-nav__icon main-nav__icon--chat"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-chat"></use></svg>
+                            <a class="main-nav__link">
+                                Пункт меню
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="main-nav__toggler main-nav__toggler--hidden">
+                      <span class="toggler toggler--open"></span> <!-- Только для мобильной версии -->
+                    </div>
+                </nav>
+                <div class="content">
+                    <h4 class="content__heading">
+                        Главная / Поиск
+                    </h4>
+                    <form class="content__filling rubricks">
+                        <header class="rubricks__header">
+                            <div class="rubricks__symbol"></div>
+                            <h5 class="rubricks__heading">
+                                Заголовок
+                            </h5>
+                            <svg width="18" height="18" class="rubricks__icon"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-menu-open"></use></svg>
+                        </header>
+                        <div class="rubricks__search-bar">
+                            <label>
+                                <input type="text" class="rubricks__input" id="rubricks__input" value="Форма поиска">
+                                <svg width="16" height="16" class="rubricks__search-icon rubricks__search-icon--magnifier"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-magnifier"></use></svg>
+                                <svg width="8.5" height="5.656" class="rubricks__search-icon rubricks__search-icon--arrow"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-arrow"></use></svg>
+                            </label>
+                            <input type="submit" class="rubricks__btn" value="Сформировать отчет">
+                            <svg width="8.5" height="5.656" class="rubricks__btn-icon"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-arrow"></use></svg>
+                        </div>
+                        <div class="rubricks__main">
+                            <div class="rubricks__block">
+                                <svg width="18" height="16" class="rubricks__item-icon rubricks__item-icon--checked" id="rubricks-1"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-folder"></use></svg>
+                                <input type="checkbox" class="rubricks__checkbox rubricks__item" id="rubric-1">
+                                <label for="rubric-1" class="rubricks__label rubricks__name">
+                                    Открытые данные
+                                </label>
+                                <div class="rubricks__switch rubricks__switch--close rubricks__switch--open rubricks__open-data"></div>
+                                <ul class="rubricks__list">
+                                    <li class="rubricks__list-item">
+                                        <input type="checkbox" class="rubricks__checkbox nested-checkbox" id="nested-checkbox-1">
+                                        <label for="nested-checkbox-1" class="rubricks__label rubricks__item-label">
+                                            <span class="blue-text">Раздел 1.</span> Сведения
+                                        </label>
+                                    </li>
+                                    <li class="rubricks__list-item">
+                                        <input type="checkbox" class="rubricks__checkbox nested-checkbox" id="nested-checkbox-2">
+                                        <label for="nested-checkbox-2" class="rubricks__label rubricks__item-label">
+                                            <span class="blue-text">Раздел 2.</span> Сведения длинное название
+                                        </label>
+                                    </li>
+                                    <li class="rubricks__list-item">
+                                        <input type="checkbox" class="rubricks__checkbox nested-checkbox" id="nested-checkbox-3">
+                                        <label for="nested-checkbox-3" class="rubricks__label rubricks__item-label">
+                                            <span class="blue-text">Раздел 3.</span> Сведения длинное название
+                                        </label>
+                                    </li>
+                                    <li class="rubricks__list-item">
+                                        <input type="checkbox" class="rubricks__checkbox nested-checkbox" id="nested-checkbox-4">
+                                        <label for="nested-checkbox-4" class="rubricks__label rubricks__item-label">
+                                            <span class="blue-text">Раздел 4.</span> Сведения длинное название
+                                        </label>
+                                    </li>
+                                    <li class="rubricks__list-item">
+                                        <input type="checkbox" class="rubricks__checkbox nested-checkbox" id="nested-checkbox-5">
+                                        <label for="nested-checkbox-5" class="rubricks__label rubricks__item-label">
+                                            <span class="blue-text">Раздел 5.</span> Сведения очень длинное название уместилось в три строки
+                                        </label>
+                                    </li>
+                                    <li class="rubricks__list-item">
+                                        <input type="checkbox" class="rubricks__checkbox nested-checkbox" id="nested-checkbox-6">
+                                        <label for="nested-checkbox-6" class="rubricks__label rubricks__item-label">
+                                            <span class="blue-text">Раздел 6.</span> Сведения очень длинное название уместилось в три строки
+                                        </label>
+                                    </li>
+                                    <li class="rubricks__list-item">
+                                        <input type="checkbox" class="rubricks__checkbox nested-checkbox" id="nested-checkbox-7">
+                                        <label for="nested-checkbox-7" class="rubricks__label rubricks__item-label">
+                                            <span class="blue-text">Раздел 7.</span> Сведения очень длинное название уместилось в три строки
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="rubricks__block">
+                                <svg width="18" height="16" class="rubricks__item-icon"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-folder"></use></svg>
+                                <input type="checkbox" class="rubricks__checkbox rubricks__item" id="rubric-2">
+                                <label for="rubric-2" class="rubricks__label rubricks__name">
+                                    Данные 2
+                                </label>
+                                <div class="rubricks__switch rubricks__switch--close"></div>
+                            </div>
+                            <div class="rubricks__block">
+                                <svg width="18" height="16" class="rubricks__item-icon"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#icon-folder"></use></svg>
+                                <input type="checkbox" class="rubricks__checkbox rubricks__item" id="rubric-3">
+                                <label for="rubric-3" class="rubricks__label rubricks__name">
+                                    Данные 3
+                                </label>
+                                <div class="rubricks__switch rubricks__switch--close"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+	<script>
+        $(document).ready(function(){
+            $(".rubricks__open-data").click(function() { 
+                $(".rubricks__list").toggleClass('rubricks__list--closed');
+                $(".rubricks__open-data").toggleClass('rubricks__switch--open');
+                $("#rubricks-1").toggleClass('rubricks__item-icon--checked');
+            });
+        });
+        $(document).ready(function(){
+            $(".search-bar__icon--magnifier").click(function() { 
+                $(".search-bar__input").toggleClass('search-bar__input--close');
+            });
+        });
+        $(document).ready(function(){
+            $(".main-nav__toggler").click(function() {
+                $(".toggler").toggleClass('toggler--open');
+                $(".toggler").toggleClass('toggler--close');
+                $(".main-nav__list").toggleClass('main-nav__list--close');
+            });
+        });
+	</script>
+</html>
